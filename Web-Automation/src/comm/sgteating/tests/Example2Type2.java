@@ -91,7 +91,7 @@ public class Example2Type2 {
 			oBrowser.findElement(By.name("password")).sendKeys("Welcome123");
 			oBrowser.findElement(By.name("passwordCopy")).sendKeys("Welcome123");
 			oBrowser.findElement(By.xpath("//*[@id='userDataLightBox_commitBtn']/div/span")).click();
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 			
 			
 			oBrowser.findElement(By.xpath("//*[@id=\'createUserDiv\']/div/div[2]")).click();
@@ -103,7 +103,7 @@ public class Example2Type2 {
 			oBrowser.findElement(By.name("password")).sendKeys("user1234");
 			oBrowser.findElement(By.name("passwordCopy")).sendKeys("user1234");
 			oBrowser.findElement(By.xpath("//*[@id='userDataLightBox_commitBtn']/div/span")).click();
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 			
 			
 			oBrowser.findElement(By.xpath("//*[@id=\'createUserDiv\']/div/div[2]")).click();
@@ -115,7 +115,7 @@ public class Example2Type2 {
 			oBrowser.findElement(By.name("password")).sendKeys("user3");
 			oBrowser.findElement(By.name("passwordCopy")).sendKeys("user3");
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']/div/span")).click();
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 			
 		}catch(Exception e)
 		{
@@ -144,7 +144,7 @@ public class Example2Type2 {
 			oBrowser.findElement(By.xpath("//*[@id='loginButton']/div")).click();
 			Thread.sleep(5000);
 			oBrowser.findElement(By.xpath("//*[@id=\'welcomeScreenBoxId\']/div[3]/div/span[1]")).click();
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -160,7 +160,7 @@ public class Example2Type2 {
 			oBrowser.findElement(By.xpath("//*[@id='loginButton']/div")).click();
 			Thread.sleep(5000);
 			oBrowser.findElement(By.xpath("//*[@id=\'welcomeScreenBoxId\']/div[3]/div/span[1]")).click();
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -176,7 +176,7 @@ public class Example2Type2 {
 			oBrowser.findElement(By.xpath("//*[@id='loginButton']/div")).click();
 			Thread.sleep(5000);
 			oBrowser.findElement(By.xpath("//*[@id=\'welcomeScreenBoxId\']/div[3]/div/span[1]")).click();
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -189,32 +189,32 @@ public class Example2Type2 {
 		{
 			oBrowser.findElement(By.xpath("//*[@id=\'topnav\']/tbody/tr[1]/td[5]/a/div[2]")).click();
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[1]/td[1]/div/table/tbody/tr/td/div[1]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]/table/tbody/tr/td/div[1]")).click();
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordField\']")).sendKeys("1111");
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordCopyField\']")).sendKeys("1111");
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']/div/span")).click();
 			Thread.sleep(2000);
 			
 			
-			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]/table/tbody/tr/td/div[1]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[3]/td[1]/table/tbody/tr/td/div[1]")).click();
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordField\']")).sendKeys("2222");
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordCopyField\']")).sendKeys("2222");
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']/div")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']/div/span")).click();
 			Thread.sleep(2000);
 			
-			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[3]/td[1]/table/tbody/tr/td/div[1]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[4]/td[1]/table")).click();
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordField\']")).sendKeys("3333");
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordCopyField\']")).sendKeys("3333");
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']/div")).click();
 			Thread.sleep(2000);
 			
 		}catch(Exception e)
@@ -230,7 +230,7 @@ public class Example2Type2 {
 			oBrowser.findElement(By.id("username")).sendKeys("demoUser1");
 			oBrowser.findElement(By.name("pwd")).sendKeys("1111");
 			oBrowser.findElement(By.xpath("//*[@id='loginButton']/div")).click();
-			Thread.sleep(5000);
+			Thread.sleep(1000);
 			oBrowser.findElement(By.xpath("//*[@id=\'welcomeScreenBoxId\']/div[3]/div/span[1]")).click();
 			Thread.sleep(2000);
 			
@@ -247,7 +247,7 @@ public class Example2Type2 {
 			oBrowser.findElement(By.id("username")).sendKeys("demoUser2");
 			oBrowser.findElement(By.name("pwd")).sendKeys("2222");
 			oBrowser.findElement(By.xpath("//*[@id='loginButton']/div")).click();
-			Thread.sleep(5000);
+			Thread.sleep(1000);
 			oBrowser.findElement(By.xpath("//*[@id=\'welcomeScreenBoxId\']/div[3]/div/span[1]")).click();
 			Thread.sleep(2000);
 			
@@ -264,7 +264,7 @@ public class Example2Type2 {
 			oBrowser.findElement(By.id("username")).sendKeys("demoUser3");
 			oBrowser.findElement(By.name("pwd")).sendKeys("3333");
 			oBrowser.findElement(By.xpath("//*[@id='loginButton']/div")).click();
-			Thread.sleep(5000);
+			Thread.sleep(1000);
 			oBrowser.findElement(By.xpath("//*[@id=\'welcomeScreenBoxId\']/div[3]/div/span[1]")).click();
 			Thread.sleep(2000);
 			
@@ -280,34 +280,40 @@ public class Example2Type2 {
 		{
 			oBrowser.findElement(By.xpath("//*[@id=\'topnav\']/tbody/tr[1]/td[5]/a/div[2]")).click();
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[1]/td[1]/div/table/tbody/tr/td/div[2]/div[1]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]/table/tbody/tr/td/div[1]/span[2]")).click();
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_deleteBtn\']")).click();
 			Thread.sleep(2000);
 			Alert oAlert=oBrowser.switchTo().alert();
-			String textcontent=oAlert.getText();
-			System.out.println(textcontent);
+//			String textcontent=oAlert.getText();
+//			System.out.println(textcontent);
 			oAlert.accept();
 			Thread.sleep(2000);
 			
-			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[1]/td[1]/div/table/tbody/tr/td/div[2]")).click();
+			
+			oBrowser.findElement(By.xpath("//*[@id=\"topnav\"]/tbody/tr[1]/td[5]/a/div[2]")).click();
+			Thread.sleep(4000);
+			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]")).click();
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_deleteBtn\']")).click();
 			Thread.sleep(2000);
 			Alert oAlert1=oBrowser.switchTo().alert();
-			String textcontent1=oAlert.getText();
-			System.out.println(textcontent);
-			oAlert.accept();
+//			String textcontent1=oAlert.getText();
+//			System.out.println(textcontent);
+			oAlert1.accept();
 			Thread.sleep(2000);
 			
-			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[1]/td[1]/div/table")).click();
+			
+			oBrowser.findElement(By.xpath("//*[@id=\"topnav\"]/tbody/tr[1]/td[5]/a/div[2]")).click();
+			Thread.sleep(4000);
+			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]/table/tbody/tr/td/div[1]")).click();
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_deleteBtn\']")).click();
 			Thread.sleep(2000);
 			Alert oAlert2=oBrowser.switchTo().alert();
-			String textcontent2=oAlert.getText();
-			System.out.println(textcontent);
-			oAlert.accept();
+//			String textcontent2=oAlert.getText();
+//			System.out.println(textcontent);
+			oAlert2.accept();
 			Thread.sleep(2000);
 		}catch(Exception e)
 		{

@@ -1,0 +1,219 @@
+package comm.sgtesting.pageobjectmodels;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Example7PgObjModel {
+
+	public static WebDriver oBrowser=null;
+	public static ActiTimePage oPage=null;
+	public static void main(String[] args) {
+		launchBrowser();
+		navigate();
+		login();
+		minimizeFlyOutWindow();
+		CreateCustomer();
+		CreateProject();
+		CreateTask();
+		DeleteTask();
+		DeleteProject();
+		DeleteCustomer();
+		logout();
+		closeApplication();
+	}
+	
+	public static void launchBrowser()
+	{
+		try
+		{
+			String path=System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver", path+"\\Library\\drivers\\chromedriver.exe");
+			oBrowser=new ChromeDriver();
+			oPage=new ActiTimePage(oBrowser);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	public static void navigate()
+	{
+		try
+		{
+			oBrowser.get("http://localhost/login.do");
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	static void login()
+	{
+		try
+		{
+			oPage.getUserName().sendKeys("admin");
+			oPage.getPassword().sendKeys("manager");
+			oPage.getLogin().click();
+			Thread.sleep(4000);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	static void minimizeFlyOutWindow()
+	{
+		try
+		{
+			oPage.getFlyOutWindow().click();
+			Thread.sleep(2000);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	static void logout()
+	{
+		try
+		{
+			oPage.getLogout().click();
+			Thread.sleep(2000);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	
+	static void closeApplication()
+	{
+		try
+		{
+			oBrowser.close();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+	
+	static void CreateCustomer()
+	{
+		try
+		{
+			oPage.getTaskIconClick().click();
+			Thread.sleep(2000);
+			oPage.getTaskIconClick().click();
+			Thread.sleep(2000);
+			oPage.getAddNewIconClick().click();
+			Thread.sleep(2000);
+			oPage.getNewCustomerClick().click();
+			Thread.sleep(2000);
+			oPage.getCustomerNameClick().sendKeys("Customer1");
+			Thread.sleep(2000);
+			oPage.getCreateCustomerClick().click();
+			Thread.sleep(2000);
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	static void DeleteCustomer()
+	{
+		try
+		{
+			oPage.getEditButtonClick().click();
+			Thread.sleep(2000);
+			oPage.getActionButtonClick().click();
+			Thread.sleep(2000);
+			oPage.getDeleteButtonClick().click();
+			Thread.sleep(2000);
+			oPage.getDeletePermanentClick().click();
+			Thread.sleep(2000);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	static void CreateProject()
+	{
+		try
+		{
+			oPage.getAddNewIconClick().click();
+			Thread.sleep(2000);
+			oPage.getNewProjectClick().click();
+			Thread.sleep(2000);
+			oPage.getProjectNameClick().sendKeys("Project1");
+			Thread.sleep(2000);
+			oPage.getCreateProjectClick().click();
+			Thread.sleep(3000);
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	static void DeleteProject()
+	{
+		try
+		{
+			oPage.getEditProjectClick().click();
+			Thread.sleep(2000);
+			oPage.getPrjtActionButtonClick().click();
+			Thread.sleep(2000);
+			oPage.getPrjtDeleteButtonClick().click();
+			Thread.sleep(2000);
+			oPage.getPrjtDeletePrmntButtonClick().click();
+			Thread.sleep(3000);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	static void CreateTask()
+	{
+		try
+		{
+			oPage.getAddNewTaskClick().click();
+			Thread.sleep(3000);
+			oPage.getCreateNewTaskClick().click();
+			Thread.sleep(3000);
+			oPage.getEnterTaskNameClick().sendKeys("task1");
+			Thread.sleep(2000);
+			oPage.getCreateTaskButtonClick().click();
+			Thread.sleep(3000);
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	
+	static void DeleteTask()
+	{
+		try
+		{
+			oPage.getTask1Click().click();
+			Thread.sleep(2000);
+			oPage.getTask1ActionBtnClick().click();
+			Thread.sleep(2000);
+			oPage.getTask1DeleteBtnClick().click();
+			Thread.sleep(2000);
+			oPage.getTask1DeletePrmntBtnClick().click();
+			Thread.sleep(3000);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+}
+

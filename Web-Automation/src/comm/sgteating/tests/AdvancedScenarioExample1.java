@@ -32,7 +32,7 @@ public class AdvancedScenarioExample1 {
 		loginAsUser2();
 		deleteUser3();
 		logout();
-		loginAsUser1AfterPwdChange();
+		loginAsUser1AfterPwdChange2nd();
 		deleteUser2();
 		logout();
 		login();
@@ -140,13 +140,14 @@ public class AdvancedScenarioExample1 {
 	{
 		try
 		{
-			oBrowser.findElement(By.id("username")).sendKeys("demoUser1");
-			oBrowser.findElement(By.name("pwd")).sendKeys("Welcome123");
-			oBrowser.findElement(By.xpath("//*[@id='loginButton']/div")).click();
-			Thread.sleep(5000);
-			oBrowser.findElement(By.xpath("//*[@id='welcomeScreenBoxId']/div[3]/div/span[1]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'username\']")).sendKeys("demoUser1");
 			Thread.sleep(2000);
-
+			oBrowser.findElement(By.xpath("//*[@id=\'loginFormContainer\']/tbody/tr[1]/td/table/tbody/tr[2]/td/input")).sendKeys("Welcome123");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.xpath("//*[@id=\'loginButton\']/div")).click();
+			Thread.sleep(2000);
+			oBrowser.findElement(By.xpath("//*[@id=\'welcomeScreenBoxId\']/div[3]/div/span[1]")).click();
+			Thread.sleep(2000);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -181,11 +182,11 @@ public class AdvancedScenarioExample1 {
 		{
 			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]/table/tbody/tr/td/div[1]")).click();
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordField\']")).sendKeys("suma1234");
+			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordField\']")).sendKeys("1234");
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordCopyField\']")).sendKeys("suma1234");
+			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordCopyField\']")).sendKeys("1234");
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']/div/span")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']")).click();
 			Thread.sleep(2000);
 		}catch(Exception e)
 		{
@@ -197,12 +198,15 @@ public class AdvancedScenarioExample1 {
 	{
 		try
 		{
-			oBrowser.findElement(By.id("username")).sendKeys("demoUser2");
-			oBrowser.findElement(By.name("pwd")).sendKeys("suma1234");
-			oBrowser.findElement(By.xpath("//*[@id='loginButton']/div")).click();
-			Thread.sleep(5000);
+			oBrowser.findElement(By.xpath("//*[@id=\'username\']")).sendKeys("demoUser2");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.xpath("//*[@id=\'loginFormContainer\']/tbody/tr[1]/td/table/tbody/tr[2]/td/input")).sendKeys("1234");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.xpath("//*[@id=\'loginButton\']/div")).click();
+			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'welcomeScreenBoxId\']/div[3]/div/span[1]")).click();
 			Thread.sleep(2000);
+
 
 		}catch(Exception e)
 		{
@@ -225,7 +229,7 @@ public class AdvancedScenarioExample1 {
 			oBrowser.findElement(By.name("password")).sendKeys("uma");
 			oBrowser.findElement(By.name("passwordCopy")).sendKeys("uma");
 			oBrowser.findElement(By.xpath("//*[@id='userDataLightBox_commitBtn']/div/span")).click();
-			Thread.sleep(4000);
+			Thread.sleep(3000);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -237,27 +241,18 @@ public class AdvancedScenarioExample1 {
 	{
 		try
 		{
-			oBrowser.findElement(By.xpath("//*[@id='topnav']/tbody/tr[1]/td[5]/a/div[2]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'topnav\']/tbody/tr[1]/td[5]/a/div[2]")).click();
 			Thread.sleep(2000);
-//			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]")).click();
-//			Thread.sleep(2000);
-//			
-//			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordField\']")).sendKeys("sahana");
-//			Thread.sleep(2000);
-//			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordCopyField\']")).sendKeys("sahana");
-//			Thread.sleep(2000);
-//			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']/div/span")).click();
-//			Thread.sleep(2000);
+			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]/table/tbody/tr/td/div[1]")).click();
+			Thread.sleep(2000);
 			
-			oBrowser.findElement(By.xpath(
-					"//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]/table/tbody/tr/td/div[1]/span[2]"))
-					.click();
-			Thread.sleep(3000);
-			oBrowser.findElement(By.name("password")).sendKeys("sahana");
-			oBrowser.findElement(By.name("passwordCopy")).sendKeys("sahana");
+			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordField\']")).sendKeys("1111");
 			Thread.sleep(2000);
-			oBrowser.findElement(By.className("buttonTitle")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_passwordCopyField\']")).sendKeys("1111");
 			Thread.sleep(2000);
+			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_commitBtn\']")).click();
+			Thread.sleep(2000);
+			
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -268,13 +263,14 @@ public class AdvancedScenarioExample1 {
 	{
 		try
 		{
-			oBrowser.findElement(By.id("username")).sendKeys("demoUser1");
-			oBrowser.findElement(By.name("pwd")).sendKeys("sahana");
-			oBrowser.findElement(By.xpath("//*[@id='loginButton']/div")).click();
-			Thread.sleep(5000);
-			oBrowser.findElement(By.xpath("//*[@id='welcomeScreenBoxId']/div[3]/div/span[1]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'username\']")).sendKeys("demoUser1");
 			Thread.sleep(2000);
-
+			oBrowser.findElement(By.xpath("//*[@id=\'loginFormContainer\']/tbody/tr[1]/td/table/tbody/tr[2]/td/input")).sendKeys("1111");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.xpath("//*[@id=\'loginButton\']/div")).click();
+			Thread.sleep(2000);
+//			oBrowser.findElement(By.xpath("//*[@id=\'welcomeScreenBoxId\']/div[3]/div/span[1]")).click();
+//			Thread.sleep(2000);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -285,9 +281,9 @@ public class AdvancedScenarioExample1 {
 	{
 		try
 		{
-			oBrowser.findElement(By.xpath("//*[@id='topnav']/tbody/tr[1]/td[5]/a/div[2]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'topnav\']/tbody/tr[1]/td[5]/a/div[2]")).click();
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[3]/td[1]/table")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[4]/td[1]/table/tbody/tr/td/div[1]/span[2]")).click();
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_deleteBtn\']")).click();
 			Thread.sleep(2000);
@@ -302,13 +298,32 @@ public class AdvancedScenarioExample1 {
 		}
 	}
 	
+	static void loginAsUser1AfterPwdChange2nd()
+	{
+		try
+		{
+			oBrowser.findElement(By.xpath("//*[@id=\'username\']")).sendKeys("demoUser1");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.xpath("//*[@id=\'loginFormContainer\']/tbody/tr[1]/td/table/tbody/tr[2]/td/input")).sendKeys("1111");
+			Thread.sleep(2000);
+			oBrowser.findElement(By.xpath("//*[@id=\'loginButton\']/div")).click();
+			Thread.sleep(2000);
+//			oBrowser.findElement(By.xpath("//*[@id=\'welcomeScreenBoxId\']/div[3]/div/span[1]")).click();
+//			Thread.sleep(2000);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	
 	static void deleteUser2()
 	{
 		try
 		{
-			oBrowser.findElement(By.xpath("//*[@id='topnav']/tbody/tr[1]/td[5]/a/div[2]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'topnav\']/tbody/tr[1]/td[5]/a/div[2]")).click();
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]/table/tbody/tr/td/div[1]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[3]/td[1]/table/tbody/tr/td/div[1]")).click();
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_deleteBtn\']")).click();
 			Thread.sleep(2000);
@@ -327,9 +342,9 @@ public class AdvancedScenarioExample1 {
 	{
 		try
 		{
-			oBrowser.findElement(By.xpath("//*[@id='topnav']/tbody/tr[1]/td[5]/a/div[2]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'topnav\']/tbody/tr[1]/td[5]/a/div[2]")).click();
 			Thread.sleep(2000);
-			oBrowser.findElement(By.xpath("//*[@id='userListTableContainer']/table/tbody/tr[1]/td[1]/div/table/tbody/tr/td/div[1]")).click();
+			oBrowser.findElement(By.xpath("//*[@id=\'userListTableContainer\']/table/tbody/tr[2]/td[1]/table/tbody/tr/td/div[1]")).click();
 			Thread.sleep(2000);
 			oBrowser.findElement(By.xpath("//*[@id=\'userDataLightBox_deleteBtn\']")).click();
 			Thread.sleep(2000);
